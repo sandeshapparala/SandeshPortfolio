@@ -1,0 +1,256 @@
+/*-- Containers --*/
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container-sm, .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container-md, .container-sm, .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container-lg, .container-md, .container-sm, .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1320px;
+    }
+}
+
+
+.section{
+    z-index: 1;
+    position: relative;
+}
+
+.dark-section{
+    background-color: black;
+}
+
+.light-section{
+    background-color: white;
+}
+
+.small-titles-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.small-titles-holder {
+    width: 100%;
+    max-width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.title{
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    font-family: var(--title-font);
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.title2{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    font-family: var(--title-font);
+    text-shadow: 2px 2px 4px #000000;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.subtitle{
+    font-size: 20px;
+    color: #ababab;
+    font-family : var(--title-font);
+    text-align: center;
+    font-style: italic;
+}
+
+.description{
+    font-size: 16px;
+    font-family: var(--text-font);
+    color: #e8e6e3;
+    text-align: left;
+    line-height: 1.2;
+
+}
+.description p{
+    padding-bottom: 7px;
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .grid-2{
+        grid-template-columns: 1fr;
+    }
+    .grid-3{
+        grid-template-columns: 1fr;
+    }
+    .grid-4{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.dark-section .title{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.light-section .title{
+    color: black;
+    text-shadow: 2px 2px 4px #ffffff;
+}
+
+.btn-outline{
+    border: 2px solid var(--brand-color);
+    color: var(--brand-color);
+    font-size: 18px;
+
+}
+
+.btn-outline:hover{
+    background-color: var(--brand-color);
+    color: white;
+}
+
+.btn-outline-dark{
+    border: 2px solid var(--brand-color);
+    color: var(--brand-color);
+    font-size: 18px;
+    background-color: black;
+}
+
+.btn-outline-dark:hover{
+    background-color: var(--brand-color);
+    color: white;
+}
+
+.btn-outline-light{
+    border: 2px solid var(--white-color);
+    color: var(--white-color);
+    font-size: 18px;
+    background-color: transparent;
+}
+
+.btn-outline-light:hover{
+    background-color: var(--white-color);
+    color: black;
+}
+
+.btn-default{
+    /*background-color: var(--brand-color);*/
+    border: solid 1px var(--brand-color);
+    color: white;
+    font-weight: bold;
+    /*font-size: 18px;*/
+    padding: 0px 20px;
+    transition: background-color 0.3s ease;
+    height: 35px;
+    /*height: 60%;*/
+    /*margin: 10% 0;*/
+}
+
+.btn-default:hover{
+    transform: scale(0.95);
+    background-color: var(--brand-color);
+}
+
+
+.padding-0{
+    padding: 0;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar:hover {
+    width: 5px; /* Adjust the width as needed */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black; /* You can change this color if needed */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--brand-color); /* Yellow color for the scrollbar handle */
+    border-radius: 10px; /* Roundness of the scroll thumb */
+}s
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    width: 5px;
+}
